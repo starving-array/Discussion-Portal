@@ -1,0 +1,23 @@
+package com.socialapp.User.model;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+public class LogIn {
+
+	private String email;
+	private String password;
+
+	private String sessionToken;
+	private boolean expired = false;
+
+	public LogIn() {
+		this.email = email;
+		this.password = password;
+	}
+
+}

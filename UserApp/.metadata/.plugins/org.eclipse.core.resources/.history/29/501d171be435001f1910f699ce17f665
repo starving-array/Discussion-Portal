@@ -1,0 +1,12 @@
+package com.socialapp.User.model;
+
+public class UserShareDto {
+	
+	
+	private String name;
+	private String email;
+
+	public UserShareDto() {
+		// TODO Auto-generated constructor stub
+	}
+}

@@ -1,0 +1,5 @@
+package com.socialapp.User.service;
+
+public class logInServImpl {
+
+}

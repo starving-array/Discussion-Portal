@@ -1,0 +1,45 @@
+package com.socialapp.User.service;
+
+import java.time.LocalDateTime;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.socialapp.User.helper.ConvertHash;
+import com.socialapp.User.model.LogIn;
+import com.socialapp.User.model.UserInfo;
+import com.socialapp.User.repo.LoginDetailsRepo;
+import com.socialapp.User.repo.UserRepo;
+
+public class logInServImpl implements LogInServ {
+
+	@Autowired
+	LoginDetailsRepo loginDetailsRepo;
+	
+	@Autowired
+	UserRepo userRepo;
+
+	@Override
+	public String UserLogin(String email, String password) {
+		String msg = "Login Details Invalid";
+		UserInfo logIn = userRepo.findByEmail(email);
+		if (password.equals(logIn.getPassword())) {
+			// new login create
+			Log
+			// create hash and assign
+			String inputText = email + password + LocalDateTime.now().toString();
+			ConvertHash hashText = new ConvertHash(inputText);
+			inputText = hashText.getHash(inputText);
+			
+		}
+
+		return msg;
+
+	}
+
+	@Override
+	public void logout(String accessToken) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,39 @@
+package com.socialapp.discussion.service;
+
+import java.util.List;
+
+import com.socialapp.discussion.model.DiscussDto;
+
+public class DiscussionServImpl implements DiscussionService {
+
+	@Override
+	public void createDiscussion(String userid, DiscussDto discussDto) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void uppdateDiscussion(DiscussDto discussDto) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void deleteDiscussion(String discussionId) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public List<DiscussDto> getListOfDiscussionOnTag(String hashtag) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<DiscussDto> getListOfDiscussionBasedOnKeyword(String keyword) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

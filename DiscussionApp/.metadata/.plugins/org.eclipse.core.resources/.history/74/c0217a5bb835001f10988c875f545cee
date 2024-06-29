@@ -1,0 +1,5 @@
+package com.socialapp.discussion.repository;
+
+public interface DiscussionRepo {
+
+}

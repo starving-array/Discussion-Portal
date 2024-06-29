@@ -1,0 +1,10 @@
+package com.socialapp.User.service;
+
+import com.socialapp.User.model.UserInfo;
+
+public interface userService {
+
+	public UserInfo createUser(String name, String email, String phone);
+
+	public List<UserInfo> getuserAll();
+}

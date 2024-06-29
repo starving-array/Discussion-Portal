@@ -1,0 +1,20 @@
+package com.socialapp.User.service;
+
+import java.util.List;
+
+import com.socialapp.User.model.UserDto;
+import com.socialapp.User.model.UserInfo;
+
+public interface userService {
+
+	public UserInfo createUser(UserDto userDto);
+
+	public UserInfo updateUserInfo(UserDto userDto);
+
+	public UserInfo deleteUser();
+
+	public List<UserInfo> searchUserByName(String name);
+
+	public List<UserInfo> showUserList();
+
+}

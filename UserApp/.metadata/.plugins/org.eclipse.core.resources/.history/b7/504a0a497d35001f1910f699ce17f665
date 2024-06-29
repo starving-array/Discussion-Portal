@@ -1,0 +1,15 @@
+package com.socialapp.User.model;
+
+public class LogIn {
+
+	private String email;
+	private String password;
+
+	private String sessionToken;
+	private boolean expired = false;
+	
+	public LogIn() {
+		this.email = email;
+		this.password = password;
+	}
+}

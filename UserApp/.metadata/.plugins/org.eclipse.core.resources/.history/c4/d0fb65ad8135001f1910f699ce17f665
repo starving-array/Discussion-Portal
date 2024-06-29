@@ -1,0 +1,10 @@
+package com.socialapp.User.service;
+
+public interface LogInServ {
+
+	String UserLogin(String email, String password);
+	
+	void logout(String accessToken);
+	
+	
+}

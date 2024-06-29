@@ -1,0 +1,13 @@
+package com.socialapp.User.model.in.model;
+
+import java.time.LocalDateTime;
+
+import com.socialapp.User.model.in.userInput;
+
+public class email extends userInput {
+
+	public email(String userinput) {
+		super(userinput);
+	}
+
+}

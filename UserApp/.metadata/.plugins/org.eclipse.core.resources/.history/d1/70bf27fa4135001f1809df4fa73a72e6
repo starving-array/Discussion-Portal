@@ -1,0 +1,11 @@
+package com.socialapp.User.model.in.model;
+
+import com.socialapp.User.model.in.userInput;
+
+public class email extends userInput {
+
+	public email(String userinput) {
+		super(userinput);
+	}
+
+}

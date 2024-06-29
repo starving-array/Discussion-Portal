@@ -1,0 +1,6 @@
+package com.socialapp.User.helper;
+
+public class ObjStr {
+
+	public String obj
+}

@@ -1,0 +1,11 @@
+package com.socialapp.discussion.model;
+
+public class DiscussDto {
+
+	private String caption;
+	private String bodyText;
+	private String hashtag;
+	
+	
+}
+

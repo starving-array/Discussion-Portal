@@ -1,0 +1,12 @@
+package com.socialapp.discussion.model.in.model;
+
+import com.socialapp.discussion.model.in.BasicText;
+
+public class Caption extends BasicText {
+
+	public Caption(String text) {
+		super(text);
+		
+	}
+
+}

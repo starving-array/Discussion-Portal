@@ -1,0 +1,5 @@
+package com.socialapp.discussion.model.in.model;
+
+public class BodyText {
+
+}

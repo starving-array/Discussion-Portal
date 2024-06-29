@@ -1,0 +1,9 @@
+package com.socialapp.User.service;
+
+import com.socialapp.User.model.UserInfo;
+import com.socialapp.User.model.in.userInput;
+
+public interface userService {
+
+	public UserInfo createUser(String name, String email, String phone);
+}

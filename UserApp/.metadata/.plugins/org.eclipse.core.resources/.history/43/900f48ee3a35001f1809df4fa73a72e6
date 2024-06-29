@@ -1,0 +1,5 @@
+package com.socialapp.User.model;
+
+public class UserInfo {
+
+}

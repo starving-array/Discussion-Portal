@@ -1,0 +1,5 @@
+package com.socialapp.User.model.in.model;
+
+public class email {
+
+}

@@ -1,0 +1,13 @@
+package com.socialapp.User.model.in;
+
+public class userInput {
+
+	private String userInput;
+
+	public userInput(String userinput) {
+		this.userInput = userinput;
+	}
+	
+	
+
+}

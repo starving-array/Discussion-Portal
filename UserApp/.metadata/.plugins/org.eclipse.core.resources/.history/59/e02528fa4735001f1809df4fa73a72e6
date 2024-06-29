@@ -1,0 +1,27 @@
+package com.socialapp.User.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.socialapp.User.model.UserInfo;
+import com.socialapp.User.repo.UserRepo;
+
+@Service
+public class userservImpl implements userService {
+
+	@Autowired
+	UserRepo userRepo;
+
+	@Override
+	public UserInfo createUser(String name, String email, String phone) {
+		UserInfo userInput = new UserInfo(name, email, phone);
+		return userRepo.save(userInput);
+	}
+
+	@Override
+	public List<UserInfo> getuserAll() {
+		// TODO Auto-generated method stub
+		return userRepo.findAll();
+	}
+
+}

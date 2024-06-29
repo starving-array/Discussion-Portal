@@ -1,0 +1,15 @@
+package com.socialapp.User.model.in;
+
+import java.time.LocalDateTime;
+
+public class userInput {
+
+	protected String userInput;
+	protected LocalDateTime date;
+
+	public userInput(String userinput) {
+		this.userInput = userinput;
+		this.date = LocalDateTime.now();
+	}
+
+}

@@ -1,0 +1,31 @@
+package com.socialapp.User.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.socialapp.User.model.LogIn;
+import com.socialapp.User.repo.LoginDetailsRepo;
+
+public class logInServImpl implements LogInServ{
+
+	
+	@Autowired
+	LoginDetailsRepo loginDetailsRepo;
+	
+	
+	@Override
+	public void UserLogin(String email, String password) {
+		LogIn logIn = loginDetailsRepo.getById(email);
+		if(password.equals("")) {
+			// create hash and assign
+			
+		}
+		
+	}
+
+	@Override
+	public void logout(String accessToken) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

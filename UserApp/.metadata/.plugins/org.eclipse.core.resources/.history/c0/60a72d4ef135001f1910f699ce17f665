@@ -1,0 +1,18 @@
+package com.socialapp.User.repo;
+
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+
+import com.socialapp.User.model.UserInfo;
+import com.socialapp.User.model.UserShareDto;
+
+public interface UserRepo extends JpaRepository<UserInfo, Integer> {
+
+	UserInfo findByEmail(String email);
+
+	@Query(value = "SELECT name, email FROM user_info u where u.name LIKE %:name%", nativeQuery = true)
+	List<UserShareDto> findByName(String name);
+
+}

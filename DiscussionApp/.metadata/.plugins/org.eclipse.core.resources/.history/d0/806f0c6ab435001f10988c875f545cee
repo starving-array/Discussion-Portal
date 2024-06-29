@@ -1,0 +1,5 @@
+package com.socialapp.discussion.model.in;
+
+public class BasicText {
+
+}

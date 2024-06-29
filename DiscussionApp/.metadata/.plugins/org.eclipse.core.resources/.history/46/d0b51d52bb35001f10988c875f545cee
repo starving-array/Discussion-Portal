@@ -1,0 +1,14 @@
+package com.socialapp.discussion.service;
+
+public interface DiscussionService {
+	
+	void createDiscussion();
+	
+	void uppdateDiscussion();
+	
+	void deleteDiscussion();
+	
+	void getListOfDiscussionOnTag(String hashtag);
+	
+	void getListOfDiscussionBasedOnKeyword(String keyword);
+}

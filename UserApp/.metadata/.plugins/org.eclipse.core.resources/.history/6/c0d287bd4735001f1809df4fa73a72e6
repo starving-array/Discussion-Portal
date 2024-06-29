@@ -1,0 +1,28 @@
+package com.socialapp.User.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.HttpStatusCode;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.socialapp.User.model.UserInfo;
+import com.socialapp.User.service.userService;
+
+@RestController
+@RequestMapping
+public class UserController {
+
+	@Autowired
+	userService userService;
+
+	@PostMapping("/add/{name}/{email}/{phone}")
+	public ResponseEntity<UserInfo> addUser(@PathVariable("name") String name, @PathVariable("email") String email,
+			@PathVariable("phone") String phone) {
+		UserInfo userInfo = userService.createUser(name, email, phone);
+		return new ResponseEntity<UserInfo>(userInfo, HttpStatus.CREATED);
+	}
+}

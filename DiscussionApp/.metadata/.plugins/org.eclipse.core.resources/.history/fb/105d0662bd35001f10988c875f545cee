@@ -1,0 +1,5 @@
+package com.socialapp.discussion.service;
+
+public interface UserClient {
+
+}

@@ -1,0 +1,81 @@
+package com.socialapp.discussion.model;
+
+import java.time.LocalDateTime;
+
+import javax.persistence.Embedded;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+import com.socialapp.discussion.helper.ObjStr;
+import com.socialapp.discussion.model.in.model.BodyText;
+import com.socialapp.discussion.model.in.model.Caption;
+
+@Entity
+public class Discuss {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int discussId;
+
+	private int userId;
+
+	private LocalDateTime postTime;
+
+	private String caption;
+
+	private String body;
+
+	private String hashtag;
+
+	public Discuss(int userid, String caption, String bodytext, String hashtag) {
+		this.userId = userId;
+		ObjStr cap = new ObjStr(caption);
+		
+		this.caption =cap.objToString(new Caption(caption));
+		this.body = new BodyText(bodytext);
+		this.hashtag = hashtag;
+		this.postTime = LocalDateTime.now();
+	}
+
+	public int getDiscussId() {
+		return discussId;
+	}
+
+	public int getUserId() {
+		return userId;
+	}
+
+	public LocalDateTime getPostTime() {
+		return postTime;
+	}
+
+
+	public Caption getCaption() {
+		return caption;
+	}
+
+	public void setCaption(String caption) {
+		this.caption = new Caption(caption);
+	}
+
+	public BodyText getBody() {
+		return body;
+	}
+
+	public void setBody(String body) {
+		this.body = new BodyText(body);
+	}
+
+	public String getHashtag() {
+		return hashtag;
+	}
+
+	public void setHashtag(String hashtag) {
+		this.hashtag = hashtag;
+	}
+	
+	
+
+}

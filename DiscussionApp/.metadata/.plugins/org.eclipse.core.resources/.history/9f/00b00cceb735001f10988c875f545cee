@@ -1,0 +1,38 @@
+package com.socialapp.discussion.model;
+
+import java.time.LocalDateTime;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+import com.socialapp.discussion.model.in.model.BodyText;
+import com.socialapp.discussion.model.in.model.Caption;
+
+@Entity
+public class Discuss {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int discussId;
+
+	private int userId;
+
+	private LocalDateTime postTime;
+
+	private Caption caption;
+
+	private BodyText body;
+
+	private String hashtag;
+
+	public Discuss(int userid, String caption, String bodytext, String hashtag) {
+		this.userId = userId;
+		this.caption = new Caption(caption);
+		this.body = new BodyText(bodytext);
+		this.hashtag = hashtag;
+		this.postTime = LocalDateTime.now();
+	}
+
+}
