@@ -5,16 +5,33 @@ import javax.persistence.Embeddable;
 @Embeddable
 public class DiscussDto {
 
+	private int discussId;
 	private String caption;
 	private String bodytext;
-	
-	public DiscussDto(String caption, String bodytext, String hashtag) {
+	private String hashtag;
+
+	public DiscussDto(int id, String caption, String bodytext, String hashtag) {
 		this.caption = caption;
 		this.bodytext = bodytext;
 		this.hashtag = hashtag;
+		this.discussId = id;
 	}
 
-	private String hashtag;
+	public DiscussDto() {
+
+	}
+
+	public int getDiscussId() {
+		return discussId;
+	}
+
+	public String getBodytext() {
+		return bodytext;
+	}
+
+	public void setBodytext(String bodytext) {
+		this.bodytext = bodytext;
+	}
 
 	public String getCaption() {
 		return caption;
@@ -22,14 +39,6 @@ public class DiscussDto {
 
 	public void setCaption(String caption) {
 		this.caption = caption;
-	}
-
-	public String getBodyText() {
-		return bodytext;
-	}
-
-	public void setBodyText(String bodyText) {
-		this.bodytext = bodyText;
 	}
 
 	public String getHashtag() {

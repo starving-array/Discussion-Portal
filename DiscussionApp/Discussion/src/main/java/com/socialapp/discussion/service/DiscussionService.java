@@ -3,16 +3,18 @@ package com.socialapp.discussion.service;
 import java.util.List;
 
 import com.socialapp.discussion.model.DiscussDto;
+import com.socialapp.discussion.model.DiscussOutputDTO;
 
 public interface DiscussionService {
 	
-	String createDiscussion(int userid, DiscussDto discussDto);
+	String createDiscussion(String token, DiscussDto discussDto);
 	
-	void uppdateDiscussion(DiscussDto discussDto);
+	String updateDiscussion(String userToken, DiscussDto discussDto);
 	
-	void deleteDiscussion(String discussionId);
+	String deleteDiscussion(String token ,int discussionId);
 	
-	List<DiscussDto> getListOfDiscussionOnTag(String hashtag);
+	List<DiscussOutputDTO> getListOfDiscussionOnTag(String hashtag);
 	
-	List<DiscussDto> getListOfDiscussionBasedOnKeyword(String keyword);
+	List<DiscussOutputDTO> getListOfDiscussionBasedOnKeyword(String keyword);
+
 }

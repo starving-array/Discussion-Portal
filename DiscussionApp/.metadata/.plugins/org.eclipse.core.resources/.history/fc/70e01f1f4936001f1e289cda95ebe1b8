@@ -1,0 +1,28 @@
+package com.socialapp.discussion.model;
+
+import java.time.LocalDateTime;
+
+import javax.persistence.Embeddable;
+
+@Embeddable
+public class DiscoussOutputDTO {
+
+	private String caption;
+	private String body;
+	private LocalDateTime creationTime;
+	private String author;
+	private String email;
+
+	public DiscoussOutputDTO() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public DiscoussOutputDTO(String caption, String body, String author, String email, LocalDateTime time) {
+		this.caption = caption;
+		this.body = body;
+		this.creationTime = time;
+		this.author = author;
+		this.email = email;
+	}
+
+}

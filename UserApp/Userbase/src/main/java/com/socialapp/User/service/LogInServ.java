@@ -1,10 +1,14 @@
 package com.socialapp.User.service;
 
+import com.socialapp.User.model.LogIn;
+
 public interface LogInServ {
 
-	String login(String email, String password);
+	public String login(String email, String password);
 	
-	String logout(String accessToken);
+	public String logout(String accessToken);
+	
+	public LogIn getLoginDetail(String accessToken);
 	
 	
 }

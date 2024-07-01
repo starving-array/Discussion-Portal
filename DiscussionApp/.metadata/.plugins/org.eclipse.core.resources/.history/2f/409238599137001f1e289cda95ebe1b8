@@ -1,0 +1,22 @@
+package com.socialapp.discussion.service;
+
+import java.util.List;
+
+import com.socialapp.discussion.model.DiscussOutputDTO;
+import com.socialapp.discussion.model.loginInfoShareDto;
+import com.socialapp.discussion.model.DiscussDto;
+
+public interface DiscussionService {
+	
+	String createDiscussion(int userid, DiscussDto discussDto);
+	
+	void updateDiscussion(DiscussDto discussDto, String userToken);
+	
+	void deleteDiscussion(String discussionId);
+	
+	List<DiscussOutputDTO> getListOfDiscussionOnTag(String hashtag);
+	
+	List<DiscussOutputDTO> getListOfDiscussionBasedOnKeyword(String keyword);
+	
+	loginInfoShareDto getLoginInfo(String sessionToken);
+}

@@ -10,36 +10,26 @@ public class LogIn {
 
 	@Id
 	private String sessionToken;
+	private int userid;
 	private String email;
-	private String password;
-
+	private LocalDateTime logintime;
+	private LocalDateTime logouttime;
 	private boolean expired = true;
-	private String loginTime;
 
 	public LogIn() {
-
 	}
 
-	public LogIn(String email, String password) {
+	public LogIn(String email) {
 		this.email = email;
-		this.password = password;
-		this.loginTime = LocalDateTime.now().toString();
+		this.logintime = LocalDateTime.now();
 	}
 
-	public String getEmail() {
-		return email;
+	public int getUserid() {
+		return userid;
 	}
 
-	public void setEmail(String email) {
-		this.email = email;
-	}
-
-	public String getPassword() {
-		return password;
-	}
-
-	public void setPassword(String password) {
-		this.password = password;
+	public void setUserid(int userid) {
+		this.userid = userid;
 	}
 
 	public String getSessionToken() {
@@ -50,20 +40,28 @@ public class LogIn {
 		this.sessionToken = sessionToken;
 	}
 
+	public String getEmail() {
+		return email;
+	}
+
+	public LocalDateTime getLogintime() {
+		return logintime;
+	}
+
+	public LocalDateTime getLogouttime() {
+		return logouttime;
+	}
+
+	public void setLogouttime(LocalDateTime logouttime) {
+		this.logouttime = logouttime;
+	}
+
 	public boolean isExpired() {
 		return expired;
 	}
 
 	public void setExpired(boolean expired) {
 		this.expired = expired;
-	}
-
-	public String getLoginTime() {
-		return loginTime;
-	}
-
-	public void setLoginTime(String loginTime) {
-		this.loginTime = loginTime;
 	}
 
 }
